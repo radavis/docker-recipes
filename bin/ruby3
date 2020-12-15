@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+docker run -it \
+  --rm \
+  --name my-running-script \
+  --volume "$(pwd)":/usr/src/myapp \
+  --workdir /usr/src/myapp \
+  ruby:3.0-rc \
+  ruby $*
