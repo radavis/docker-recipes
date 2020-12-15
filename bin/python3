@@ -2,7 +2,7 @@
 
 docker run -it \
   --rm \
-  --name my-running-script \
+  --name python-3 \
   --volume "$(pwd)":/usr/src/myapp \
   --workdir /usr/src/myapp \
   python:3 \

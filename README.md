@@ -20,6 +20,10 @@ $ docker run -it \
 $ ./bin/python3 learnpython.py
 ```
 
+This is useful for testing code examples with the core language.
+
+If we need other libraries, use a `Dockerfile` or a `docker-compose.yml` file.
+
 ## Try out Ruby v3 features
 
 [ruby](https://hub.docker.com/_/ruby) docker image on dockerhub.
@@ -49,13 +53,18 @@ $ docker run -it \
 $ ./bin/ruby3 ruby3-features.rb
 ```
 
-## Docker: bind mounts
+## Docker: bind mounts vs volumes
 
 > When you use a bind mount, a file or directory on the host machine is mounted
 > into a container. The file or directory is referenced by its absolute path on
 > the host machine. By contrast, when you use a volume, a new directory is 
 > created within Docker’s storage directory on the host machine, and Docker 
 > manages that directory’s contents. -- [https://docs.docker.com/storage/bind-mounts/]()
+
+In summary:
+
+* bind mount -> files are managed by the host os.
+* docker volume -> files are managed by docker.
 
 ## Host static content with nginx
 
